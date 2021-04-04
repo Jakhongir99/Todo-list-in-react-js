@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* .App {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+  flex-direction: column;
+  color: #fff;
+  padding: 40px 0px;
+}
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  padding: 20px 0px;
+}
+li div {
+  padding-top: 10px;
+  letter-spacing: 1px;
+}
+li div span {
+  margin-right: 5px;
+}
+.pagination button {
+  background-color: #fff;
+  padding: 7px 12px;
+  color: #111;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  margin: 0;
+}
+.active {
+  background-color: rgb(7, 99, 68) !important;
+  color: #fff !important;
+}
+.table th,
+td {
+  border-collapse: collapse !important;
+  border: 2px solid rgb(153, 226, 35);
+  font-size: 18px;
+  padding: 10px;
+}
+.download-table-xls-button {
+  background-color: rgb(96, 96, 240);
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 3px;
+} */
+.todo {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: #0f2027; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2c5364,
+    #203a43,
+    #0f2027
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.todo__title {
+  margin: 30px 0;
+  letter-spacing: 2px;
+  color: #67875d;
+  text-shadow: 0 2px 1px #79a06d, -1px 3px 1px #82ad75, -2px 5px 1px #8ebf80;
+}
+.todo__ul {
+  width: 400px;
+  max-width: 400px;
+  margin: auto;
+}
+.todo__li {
+  list-style: none;
+  border-bottom: 1px solid #67875d;
+  color: #fff;
+}
+.todo__div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 12px;
+  align-items: center;
+  margin: 5px 0px;
+}
+.bi-trash,
+.bi-check,
+.bi-pencil,
+.bi-save,
+.bi-x-circle {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 3px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.bi-trash,
+.bi-x-circle {
+  color: rgb(233, 64, 64);
+  border: 1px dashed rgb(233, 64, 64);
+}
+.bi-trash:hover,
+.bi-x-circle:hover {
+  background-color: rgb(233, 64, 64);
+  color: #fff;
+}
+.bi-check {
+  margin-left: 10px;
+  color: rgb(43, 194, 43);
+  border: 1px dashed rgb(43, 194, 43);
+}
+.bi-check:hover {
+  background-color: rgb(43, 194, 43);
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.bi-pencil {
+  color: yellow;
+  border: 1px dashed yellow;
+  margin-left: 10px;
+}
+.bi-pencil:hover {
+  background-color: yellow;
+  color: #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bi-save {
+  color: green;
+  border: 1px solid green;
+  margin-right: 10px;
+}
+.bi-save:hover {
+  background-color: green;
+  color: #fff;
+}
+
+.todo__check {
+  text-decoration: line-through;
+}
+.todo__form {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo__form input {
+  width: 317px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  outline: none;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 18px;
+}
+.todo__form button {
+  padding: 11px 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+.todo__form button:hover,
+.todo__form input:focus {
+  color: whitesmoke;
+  box-shadow: rgba(201, 201, 201, 0.24) 0px 5px 15px;
+  background-color: transparent;
+}
+.todo__name {
+  width: 70%;
+}
+.todo__count {
+  color: #fff;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+.todo__empty {
+  display: flex;
+  color: #67875d;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+.todo__edit-value {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  outline: none;
+  padding: 3px 9px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 14px;
 }
